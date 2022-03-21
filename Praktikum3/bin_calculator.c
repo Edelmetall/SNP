@@ -92,9 +92,9 @@ unsigned int bit_operation(Expression expression) {
         case '^':
             return expression.oper1 ^ expression.oper2;
         case '<':
-            return expression.oper1 < expression.oper2;
+            return expression.oper1 << expression.oper2;
         case '>':
-            return expression.oper1 > expression.oper2;
+            return expression.oper1 >> expression.oper2;
         default:
             return 0;
     }
