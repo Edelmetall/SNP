@@ -12,5 +12,25 @@
  * @brief Lab implementation
  */
 // begin students to add code for task 4.1
+#ifndef READ_H
+#define READ_H
+#define EOF (-1) // end of file
+#define EOL 10// end of line
 
+// abnormal return values
+#define PARSE_ERROR (-1)
+#define READ_ERROR (-2)
+
+// ASCII Codes
+#define ASCII_SPACE    32 // ' '
+#define ASCII_DIGIT_0  4 // '0'
+#define ASCII_DIGIT_9  57 // '9'
+
+// conversion buffer
+#define NO_POS  (-1)
+#define BUFFERSIZE 10
+
+int getInt(int maxResult);
+
+#endif
 // end students to add code

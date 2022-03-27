@@ -12,5 +12,11 @@
  * @brief Lab implementation
  */
 // begin students to add code for task 4.1
-
+#ifndef RECTANG_H
+#define RECTANG_H
+typedef int bool;
+#define true 1
+#define false 0
+bool Rectangular(int a, int b, int c);
+#endif
 // end students to add code
