@@ -97,11 +97,13 @@ int main(int argc, char *argv[]) {
                 forEach(&anchor, printPerson);
                 break;
             case 'C':
-                clear_list(&anchor);
-                break;
             case EOF:
             case 'E':
                 clear_list(&anchor);
+                break;
+
+            default:
+                // do nothing
                 break;
         }
     } while (input != EOF && input != 'E');
