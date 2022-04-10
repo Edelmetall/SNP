@@ -12,7 +12,6 @@
  * @brief Lab implementation
  */
 // begin students to add code for task 4.1
-#include <stdio.h>
 #include "rectang.h"
 bool Rectangular(int a, int b, int c) {
 

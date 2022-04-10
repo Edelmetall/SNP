@@ -29,8 +29,7 @@ int getInt(int maxResult) {
     int input = getchar();
     while ((input != EOL) && (input != EOF)) { // read whole line
         if (bytes < BUFFERSIZE) { // only buffer first n characters
-            buffer[bytes] = (int)
-                    input;
+            buffer[bytes] = (int) input;
             bytes++;
         } else {
             result = PARSE_ERROR; // exceed buffer size, continue read line
@@ -59,11 +58,7 @@ int getInt(int maxResult) {
     } else if ((pos != bytes) || (posOfLastDigit == NO_POS)) {
         result = PARSE_ERROR;
     } else { // convert number
-        for (
-                int i = posOfFirstDigit;
-                i <=
-                posOfLastDigit;
-                i++) {
+        for (int i = posOfFirstDigit; i <= posOfLastDigit; i++) {
             result = result * 10 + (buffer[i] - ASCII_DIGIT_0);
             if (result > maxResult) {
                 result = PARSE_ERROR;

@@ -27,8 +27,7 @@ int main(void)
 {
 	// begin students to add code for task 4.1
     while (true) {
-        printf("\nDreiecksbestimmung (CTRL-C: Abbruch)\n");
-        printf("\n");
+        printf("\nDreiecksbestimmung (CTRL-C: Abbruch)\n\n");
         int word = 0;
         int a = 0;
         int b = 0;
