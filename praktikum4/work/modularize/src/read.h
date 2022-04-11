@@ -23,7 +23,7 @@
 
 // ASCII Codes
 #define ASCII_SPACE    32 // ' '
-#define ASCII_DIGIT_0  4 // '0'
+#define ASCII_DIGIT_0  48 // '0'
 #define ASCII_DIGIT_9  57 // '9'
 
 // conversion buffer

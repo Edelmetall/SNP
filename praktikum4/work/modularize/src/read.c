@@ -19,7 +19,7 @@ int getInt(int maxResult) {
 
 
 // conversion buffer
-    int buffer[BUFFERSIZE] = {0};
+    int buffer[BUFFERSIZE];
 
     int result = 0;
 
@@ -45,8 +45,7 @@ int getInt(int maxResult) {
     while ((pos < bytes) && (buffer[pos] <= ASCII_SPACE)) pos++; // skip SP
     int posOfFirstDigit = pos;
     int posOfLastDigit = NO_POS;
-    while ((pos < bytes)
-           && (buffer[pos] >= ASCII_DIGIT_0)
+    while ((pos < bytes) && (buffer[pos] >= ASCII_DIGIT_0)
            && (buffer[pos] <= ASCII_DIGIT_9)) {
         posOfLastDigit = pos;
         pos++;

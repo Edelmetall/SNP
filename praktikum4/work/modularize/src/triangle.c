@@ -23,9 +23,8 @@
  * @brief Main entry point.
  * @returns Returns EXIT_SUCCESS (=0) on success, EXIT_FAILURE (=1) on failure.
  */
-int main(void)
-{
-	// begin students to add code for task 4.1
+int main(void) {
+    // begin students to add code for task 4.1
     while (true) {
         printf("\nDreiecksbestimmung (CTRL-C: Abbruch)\n\n");
         int word = 0;
@@ -36,8 +35,7 @@ int main(void)
         do {
             printf("Seite a: ");
             word = getInt(MAX_NUMBER);
-        }
-        while ((word < 0) && (word != READ_ERROR));
+        } while ((word < 0) && (word != READ_ERROR));
         if (word >= 0)
             a = word;
         else
@@ -46,8 +44,7 @@ int main(void)
         do {
             printf("Seite b: ");
             word = getInt(MAX_NUMBER);
-        }
-        while ((word < 0) && (word != READ_ERROR));
+        } while ((word < 0) && (word != READ_ERROR));
         if (word >= 0)
             b = word;
         else
@@ -56,23 +53,19 @@ int main(void)
         do {
             printf("Seite c: ");
             word = getInt(MAX_NUMBER);
-        }
-        while ((word < 0) && (word != READ_ERROR));
+        } while ((word < 0) && (word != READ_ERROR));
         if (word >= 0)
             c = word;
         else
             break;
 
         if (Rectangular(a, b, c) == true)
-            printf("-> Dreieck %i-%i-%i ist rechtwinklig",a,b,c);
+            printf("-> Dreieck %i-%i-%i ist rechtwinklig", a, b, c);
         else
-            printf("-> Dreieck %i-%i-%i ist nicht rechtwinklig",a,b,c);
-        printf("\n");
-        printf("\n");
-        printf("\n");
+            printf("-> Dreieck %i-%i-%i ist nicht rechtwinklig", a, b, c);
+        printf("\n\n\n");
     }
-    printf("\n\nbye bye\n");
-    printf("\n");
-	// end students to add code
+    printf("\n\nbye bye\n\n");
+    // end students to add code
     return EXIT_SUCCESS;
 }
