@@ -6,9 +6,11 @@
 #define SNP_LIST_H
 
 #include "person.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 typedef struct node {
-    person_t content;
+    person_t *content;
     struct node *next;
 
 } node_t;

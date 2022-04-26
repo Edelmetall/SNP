@@ -81,8 +81,6 @@ static void beforeEach(void) {
     strcpy(fabia->first_name, "Fabia");
     fabia->age = 27; // almost 30, jeez
 
-    remove_file_if_exists(OUTFILE);
-    remove_file_if_exists(ERRFILE);
 }
 
 // tests
@@ -164,6 +162,6 @@ static void test_list_clear(void) {
  */
 int main(void) {
     // setup, run, teardown
-    TestMainBasic("lab test", setup, teardown, test_person_compare, test_list_insert, test_list_remove, test_list_clear
-    );
+    TestMainBasic("lab test", setup, teardown, test_person_compare, test_list_insert, test_list_remove,
+                  test_list_clear);
 }

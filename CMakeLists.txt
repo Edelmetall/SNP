@@ -3,11 +3,17 @@ project(SNP C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(.)
-include_directories(prakikum2)
+set(CMAKE_CXX_STANDARD 11)
 
-add_executable(aufgabe2 prakikum2/aufgabe2.c)
-add_executable(aufgabe3 prakikum2/aufgabe3.c)
-add_executable(aufgabe6 praktikum6/work/personen-verwaltung/src/main.c)
+set(PROJECT_HEADERS
+        praktikum6/work/personen-verwaltung/src/list.h
+        praktikum6/work/personen-verwaltung/src/person.h
+        )
+set(PROJECT_SOURCES
+        praktikum6/work/personen-verwaltung/src/main.c
+        praktikum6/work/personen-verwaltung/src/list.c
+        praktikum6/work/personen-verwaltung/src/person.c
+        )
 
-add_executable(aufgabe4 praktikum4/work/modularize/src/triangle.c)
+add_executable(untitled1 praktikum6/work/personen-verwaltung/src/main.c)
+
