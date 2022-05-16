@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
     // start customer
     printf("Customer starting (%d)\n", myID);
 
-	sem_post(myTurn);
+	//sem_post(myTurn);
     // now check the sum 
     for (i = 0; i < ITERS; i++) {
         sem_wait(myTurn);

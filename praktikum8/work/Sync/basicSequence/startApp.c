@@ -37,7 +37,7 @@ int main(void) {
     // checkSem() -> macro defined in commonDefs.h
 
     
-    myTurn = sem_open(MYTURN_SEMAPHOR, O_CREAT, 0700, 0); checkSem(myTurn);
+    myTurn = sem_open(MYTURN_SEMAPHOR, O_CREAT, 0700, 1); checkSem(myTurn);
     coin   = sem_open(COIN_SEMAPHOR,   O_CREAT, 0700, 0); checkSem(coin);
     coffee = sem_open(COFFEE_SEMAPHOR, O_CREAT, 0700, 0); checkSem(coffee);
     ready  = sem_open(READY_SEMAPHOR,  O_CREAT, 0700, 0); checkSem(ready);

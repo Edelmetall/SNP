@@ -13,8 +13,6 @@
 
 #include "banking.h"
 
-#define MAX( a, b ) ( ( a > b) ? a : b )
-#define MIN( a, b ) ( ( a <= b) ? a : b )
 //******************************************************************************
 
 typedef struct account_struct_ {
@@ -76,19 +74,8 @@ void deposit(int branchNr, int accountNr, long int value) {
 }
 
 void transfer(int fromB, int toB, int accountNr, long int value) {
-    if (fromB == toB) return;
-
-    int firstLock = MIN(fromB,toB);
-    int secondLock = MAX(fromB,toB);
-
-    pthread_mutex_lock(&bank[firstLock].accounts[accountNr].acntLock);
-    pthread_mutex_lock(&bank[secondLock].accounts[accountNr].acntLock);
-
     int money = withdraw(fromB, accountNr, value);
     deposit(toB, accountNr, money);
-
-    pthread_mutex_unlock(&bank[firstLock].accounts[accountNr].acntLock);
-    pthread_mutex_unlock(&bank[secondLock].accounts[accountNr].acntLock);
 }
 
 void checkAssets(void) {
