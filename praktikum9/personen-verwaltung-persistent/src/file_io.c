@@ -51,6 +51,7 @@ void load_person_list(void)
 	char buff[255] ;
 
 	fp = fopen("person_list.csv", "r");
+	if(fp == NULL) return;
 
 	while(fgets(buff, 255, fp)!=NULL){
 		person_t *person = malloc(sizeof(person_t));
