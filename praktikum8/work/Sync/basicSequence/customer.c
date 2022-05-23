@@ -39,6 +39,7 @@ int main(int argc, char *argv[]) {
     printf("Customer starting (%d)\n", myID);
     // now check the sum 
     for (i = 0; i < ITERS; i++) {
+	sem_post(myTurn);
         sem_wait(myTurn);
 	sem_wait(ready);
         printf("\t\t\t\tcustomer(%d) put coin %d\n", myID, i); 
@@ -47,7 +48,6 @@ int main(int argc, char *argv[]) {
 	sem_wait(coffee);
         printf("\t\t\t\tcustomer(%d) got coffee %d\n", myID, i);
         drinkingCoffee(myID);
-	sem_post(myTurn);
     }
 }
 
